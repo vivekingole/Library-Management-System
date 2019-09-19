@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<StackPane fx:id="stack_pane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.fxml.model.IDCardController">
+   <children>
+      <AnchorPane fx:id="anchor2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="431.0">
+         <children>
+            <AnchorPane fx:id="idpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="424.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="7.0">
+               <children>
+                  <ImageView fx:id="barcode" fitHeight="32.0" fitWidth="226.0" layoutX="-32.0" layoutY="188.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../img/S000001.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+                  <ImageView fitHeight="195.0" fitWidth="210.0" layoutX="148.0" layoutY="45.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/sangola.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="image" fitHeight="118.0" fitWidth="106.0" layoutX="27.0" layoutY="60.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../img/profile.jpg" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+                  <Text fx:id="title" fill="#f80303" layoutX="54.0" layoutY="30.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="SANGOLA COLLEGE, KADLAS ROAD, SANGOLA, SOLAPUR 413307" textAlignment="CENTER" wrappingWidth="350.9999962747097">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#860a0a" layoutX="39.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Borrower" wrappingWidth="84.404296875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#860a0a" layoutX="170.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Librarian" wrappingWidth="84.404296875">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#860a0a" layoutX="305.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Principal" wrappingWidth="62.00000233948231">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#860a0a" layoutX="161.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID no.     :" wrappingWidth="62.000006437301636">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#860a0a" layoutX="161.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name     :" wrappingWidth="62.000006437301636">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#860a0a" layoutX="161.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year        :" wrappingWidth="62.000006914138794">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#860a0a" layoutX="161.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valid Dt  :" wrappingWidth="62.000006437301636">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#860a0a" layoutX="161.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address  :" wrappingWidth="62.000006437301636">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#860a0a" layoutX="161.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone     :" wrappingWidth="62.000006437301636">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="id" layoutX="238.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S000001" wrappingWidth="176.13671646907278">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="name" layoutX="237.0" layoutY="100.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Vivek Vilas Ingole" wrappingWidth="167.13671654211066">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="year" layoutX="238.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2018 - 19" wrappingWidth="157.13671267934842">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="valid" layoutX="238.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="31 / 05 / 2019" wrappingWidth="167.13671875">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="phone" layoutX="238.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7397855211" wrappingWidth="157.13671267934842">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="address" layoutX="236.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A/p - kadlas , Tal - Sangola, Dist - Solapur, 413309" wrappingWidth="176.13671875">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="16.0" layoutX="39.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="130.0" />
+                  <Line endY="270.0" strokeWidth="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="0.0" />
+                  <Line endY="270.0" layoutX="421.0" layoutY="1.0" strokeWidth="2.0" />
+                  <Line endX="420.0" endY="270.0" layoutX="509.0" layoutY="11.0" startY="270.0" strokeWidth="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="270.0" />
+                  <Line endX="420.0" endY="300.0" layoutX="520.0" layoutY="11.0" startY="300.0" strokeWidth="2.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <ImageView fitHeight="48.0" fitWidth="45.0" layoutX="7.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/sangola.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="close" layoutX="36.0" layoutY="300.0" prefHeight="43.0" prefWidth="130.0" text="Close" />
+            <JFXButton layoutX="235.0" layoutY="300.0" onAction="#print" prefHeight="43.0" prefWidth="130.0" text="Print" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="381.0" prefWidth="522.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="home.fxml.model.CheckConnectionController">
+   <children>
+      <JFXButton fx:id="closebtn" layoutX="462.0" layoutY="9.0" prefHeight="20.0" prefWidth="22.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/close.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ImageView fitHeight="187.0" fitWidth="190.0" layoutX="159.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/sad.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="223.0" layoutY="240.0" prefHeight="44.0" prefWidth="82.0" text="Hmm !" textFill="#a1a1a1">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="90.0" layoutY="272.0" prefHeight="95.0" prefWidth="358.0" text="cannot connect to server. Please check your connection." textAlignment="CENTER" textFill="#a1a1a1" wrapText="true">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.controller.SubmitBookController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" stylesheets="@../css/mouseover_1.css">
+         <children>
+            <JFXTextField fx:id="hidden1" layoutX="14.0" layoutY="14.0" opacity="0.01" prefHeight="25.0" prefWidth="49.0" />
+            <Pane layoutX="83.0" layoutY="19.0" prefHeight="402.0" prefWidth="404.0" style="-fx-background-color: #dadada77;">
+               <children>
+                  <JFXTextField fx:id="mid" labelFloat="true" layoutX="190.0" layoutY="21.0" prefHeight="31.0" prefWidth="127.0" promptText="Member ID" />
+                  <JFXTextField fx:id="mname" labelFloat="true" layoutX="187.0" layoutY="140.0" prefHeight="31.0" prefWidth="181.0" promptText="Member Name" />
+                  <JFXTextArea fx:id="addr" labelFloat="true" layoutX="50.0" layoutY="201.0" prefHeight="39.0" prefWidth="318.0" promptText="Address" />
+                  <JFXTextField fx:id="phone" labelFloat="true" layoutX="52.0" layoutY="327.0" prefHeight="39.0" prefWidth="318.0" promptText="Phone no." />
+                  <JFXTextField fx:id="email" labelFloat="true" layoutX="50.0" layoutY="264.0" prefHeight="39.0" prefWidth="318.0" promptText="Email id" />
+                  <JFXRadioButton fx:id="student" layoutX="187.0" layoutY="91.0" text="Student">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="member" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="teacher" layoutX="285.0" layoutY="91.0" text="Teacher" toggleGroup="$member" />
+                  <Circle fx:id="mimg" fill="#f8f8f8" layoutX="99.0" layoutY="84.0" radius="63.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle fill="#1f93ff00" layoutX="99.0" layoutY="84.0" onMouseClicked="#openimg" radius="71.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="2.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="82.0" layoutY="439.0" prefHeight="115.0" prefWidth="845.0" style="-fx-background-color: #dadada77;">
+               <children>
+                  <JFXDatePicker fx:id="date" layoutX="234.0" layoutY="71.0" overLay="true" prefHeight="25.0" prefWidth="155.0" promptText="Select Date" />
+                  <JFXTimePicker fx:id="time" editable="true" layoutX="446.0" layoutY="71.0" overLay="true" prefHeight="25.0" prefWidth="147.0" promptText="Select Time" />
+                  <JFXTextField fx:id="late_days" labelFloat="true" layoutX="37.0" layoutY="16.0" prefHeight="25.0" prefWidth="105.0" promptText="Late days" />
+                  <JFXTextField fx:id="fine" labelFloat="true" layoutX="181.0" layoutY="16.0" prefHeight="25.0" prefWidth="105.0" promptText="Fine" style="-fx-text-fill: red;" />
+                  <JFXTextField fx:id="total_fine" labelFloat="true" layoutX="341.0" layoutY="16.0" prefHeight="25.0" prefWidth="105.0" promptText="Total Fine" />
+                  <JFXTextField fx:id="issued_date" labelFloat="true" layoutX="494.0" layoutY="16.0" prefHeight="31.0" prefWidth="118.0" promptText="Issued Date" />
+                  <JFXTextField fx:id="issued_time" labelFloat="true" layoutX="663.0" layoutY="16.0" prefHeight="31.0" prefWidth="118.0" promptText="Issued Time" />
+               </children>
+            </Pane>
+            <Pane layoutX="520.0" layoutY="19.0" prefHeight="402.0" prefWidth="404.0" style="-fx-background-color: #dadada77;">
+               <children>
+                  <JFXTextField fx:id="bid" labelFloat="true" layoutX="178.0" layoutY="22.0" prefHeight="31.0" prefWidth="134.0" promptText="Book ID" />
+                  <JFXTextField fx:id="bname" labelFloat="true" layoutX="178.0" layoutY="78.0" prefHeight="31.0" prefWidth="192.0" promptText="Book Name" />
+                  <JFXTextField fx:id="author" labelFloat="true" layoutX="178.0" layoutY="141.0" prefHeight="31.0" prefWidth="192.0" promptText="Author" />
+                  <JFXTextField fx:id="price" labelFloat="true" layoutX="42.0" layoutY="217.0" prefHeight="31.0" prefWidth="325.0" promptText="Price" />
+                  <JFXTextField fx:id="copies" labelFloat="true" layoutX="42.0" layoutY="275.0" prefHeight="31.0" prefWidth="325.0" promptText="Copies" />
+                  <JFXTextField fx:id="column" labelFloat="true" layoutX="38.0" layoutY="339.0" prefHeight="31.0" prefWidth="325.0" promptText="Column" />
+                  <Circle fx:id="bimg" fill="#f8f8f8" layoutX="89.0" layoutY="93.0" radius="63.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle fill="#1f93ff00" layoutX="89.0" layoutY="93.0" onMouseClicked="#openimg" radius="71.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="2.0" />
+               </children>
+            </Pane>
+            <JFXButton layoutX="145.0" layoutY="569.0" onAction="#reset_event" prefHeight="42.0" prefWidth="127.0" text="Reset" AnchorPane.bottomAnchor="39.0" />
+            <JFXButton layoutX="741.0" layoutY="569.0" onAction="#submit_event" prefHeight="42.0" prefWidth="118.0" text="Submit" AnchorPane.bottomAnchor="39.0" />
+            <JFXButton layoutX="543.0" layoutY="570.0" onAction="#renew_event" prefHeight="42.0" prefWidth="118.0" text="Renew" AnchorPane.bottomAnchor="38.0" />
+            <JFXButton fx:id="pay" disable="true" layoutX="338.0" layoutY="570.0" onAction="#pay_event" prefHeight="42.0" prefWidth="127.0" text="Pay Fine" AnchorPane.bottomAnchor="38.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

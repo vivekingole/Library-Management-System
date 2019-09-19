@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stack" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.controller.SettingsController">
+   <children>
+      <ScrollPane fx:id="scroll" stylesheets="@../css/mouseover_1.css">
+         <content>
+            <AnchorPane id="AnchorPane" fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3000.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100% , #6c2a99, #ffffff);">
+               <children>
+                  <VBox fx:id="vbox" layoutX="-4.0" layoutY="9.0" spacing="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                     <children>
+                        <AnchorPane prefHeight="650.0" prefWidth="960.0" style="-fx-background-color: white;">
+                           <effect>
+                              <DropShadow height="52.87" radius="25.1575" width="49.76" />
+                           </effect>
+                           <children>
+                              <Label layoutX="32.0" layoutY="30.0" prefHeight="42.0" prefWidth="190.0" text="Issue / Submit">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="student_renew_days" labelFloat="true" layoutX="267.0" layoutY="119.0" prefHeight="32.0" prefWidth="198.0" promptText="Student" />
+                              <JFXTextField fx:id="teacher_renew_days" labelFloat="true" layoutX="561.0" layoutY="119.0" prefHeight="32.0" prefWidth="210.0" promptText="Teacher" />
+                              <JFXTextField fx:id="fine_rate" layoutX="262.0" layoutY="307.0" prefHeight="32.0" prefWidth="210.0" promptText="Fine Rate per day" />
+                              <JFXTextField fx:id="student_max_issue" labelFloat="true" layoutX="265.0" layoutY="208.0" prefHeight="32.0" prefWidth="203.0" promptText="Student" />
+                              <JFXTextField fx:id="teacher_max_issue" labelFloat="true" layoutX="563.0" layoutY="208.0" prefHeight="32.0" prefWidth="207.0" promptText="Teacher" />
+                              <JFXButton layoutX="745.0" layoutY="456.0" onAction="#issueSubmitUpdate" prefHeight="46.0" prefWidth="173.0" text="Update" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </JFXButton>
+                              <Separator layoutX="87.0" layoutY="161.0" prefHeight="24.0" prefWidth="800.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+                              <Separator layoutX="50.0" layoutY="265.0" prefHeight="24.0" prefWidth="800.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+                              <Label layoutX="79.0" layoutY="217.0" prefHeight="21.0" prefWidth="143.0" text="Maximun issue">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="79.0" layoutY="316.0" prefHeight="21.0" prefWidth="135.0" text="Fine rate per day">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="50.0" layoutY="367.0" prefHeight="24.0" prefWidth="800.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+                              <Label layoutX="79.0" layoutY="423.0" prefHeight="21.0" prefWidth="135.0" text="Email notification">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <JFXToggleButton fx:id="after_issue" layoutX="250.0" layoutY="400.0" text="After issue" />
+                              <JFXToggleButton fx:id="after_submit" layoutX="524.0" layoutY="400.0" text="After Submission / renew" />
+                              <JFXToggleButton fx:id="submit_alert" layoutX="250.0" layoutY="467.0" text="Submission Alert before one day" />
+                              <Label layoutX="81.0" layoutY="123.0" prefHeight="21.0" prefWidth="143.0" text="Renew Days">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="67.0" fitWidth="76.0" layoutX="844.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                 <image>
+                                    <Image url="@../img/issuebook.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="510.0" prefWidth="960.0" style="-fx-background-color: white;">
+                           <effect>
+                              <DropShadow height="52.87" radius="25.1575" width="49.76" />
+                           </effect>
+                           <children>
+                              <Label layoutX="32.0" layoutY="30.0" prefHeight="42.0" prefWidth="259.0" text="Add / Remove Items">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton layoutX="745.0" layoutY="456.0" onAction="#addRemoveitemsUpdate" prefHeight="46.0" prefWidth="173.0" text="Update" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </JFXButton>
+                              <Separator layoutX="87.0" layoutY="161.0" prefHeight="24.0" prefWidth="800.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+                              <Separator layoutX="50.0" layoutY="265.0" prefHeight="24.0" prefWidth="800.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+                              <Label layoutX="70.0" layoutY="112.0" prefHeight="21.0" prefWidth="111.0" text="Courses">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="course" labelFloat="true" layoutX="310.0" layoutY="109.0" prefHeight="25.0" prefWidth="239.0" promptText="Courses" visibleRowCount="5" />
+                              <JFXButton fx:id="delete_course" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="661.0" layoutY="109.0" onAction="#delete_course" prefHeight="32.0" prefWidth="44.0" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="32.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/minus_red.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="add_course" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" layoutX="795.0" layoutY="107.0" onAction="#add_course" prefHeight="22.0" prefWidth="31.0" text=" ">
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/plus.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <Label layoutX="70.0" layoutY="209.0" prefHeight="21.0" prefWidth="111.0" text="Departments">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="dept" labelFloat="true" layoutX="317.0" layoutY="207.0" prefHeight="25.0" prefWidth="239.0" promptText="Departments" visibleRowCount="5" />
+                              <JFXButton fx:id="delete_department" contentDisplay="GRAPHIC_ONLY" layoutX="661.0" layoutY="201.0" onAction="#delete_dept" prefHeight="42.0" prefWidth="15.0" text="Delete">
+                                 <graphic>
+                                    <ImageView fitHeight="32.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/minus_red.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="add_department" contentDisplay="GRAPHIC_ONLY" layoutX="795.0" layoutY="199.0" onAction="#add_dept" prefHeight="46.0" prefWidth="16.0" text="Add New">
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/plus.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXComboBox fx:id="column" labelFloat="true" layoutX="310.0" layoutY="310.0" prefHeight="25.0" prefWidth="239.0" promptText="Columns" visibleRowCount="5" />
+                              <JFXButton fx:id="delete_column" contentDisplay="GRAPHIC_ONLY" layoutX="661.0" layoutY="305.0" onAction="#delete_column" prefHeight="42.0" prefWidth="0.0" text="Delete">
+                                 <graphic>
+                                    <ImageView fitHeight="32.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/minus_red.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="add_column" contentDisplay="GRAPHIC_ONLY" layoutX="795.0" layoutY="303.0" onAction="#add_column" prefHeight="46.0" prefWidth="15.0" text="Add New">
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/plus.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <Label layoutX="70.0" layoutY="313.0" prefHeight="21.0" prefWidth="111.0" text="Columns">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="64.0" fitWidth="60.0" layoutX="850.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="30.0">
+                                 <image>
+                                    <Image url="@../img/addItem.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="579.0" prefWidth="960.0" style="-fx-background-color: white;">
+                           <effect>
+                              <DropShadow height="52.87" radius="25.1575" width="49.76" />
+                           </effect>
+                           <children>
+                              <Label layoutX="32.0" layoutY="30.0" prefHeight="42.0" prefWidth="259.0" text="ID card">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton layoutX="745.0" layoutY="456.0" onAction="#idUpdate" prefHeight="46.0" prefWidth="173.0" text="Update" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </JFXButton>
+                              <Separator layoutX="87.0" layoutY="161.0" prefHeight="24.0" prefWidth="800.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+                              <Separator layoutX="50.0" layoutY="265.0" prefHeight="24.0" prefWidth="800.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+                              <Label layoutX="70.0" layoutY="112.0" prefHeight="21.0" prefWidth="111.0" text="Title">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="70.0" layoutY="209.0" prefHeight="25.0" prefWidth="85.0" text="Logo">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="id_title" layoutX="216.0" layoutY="109.0" prefHeight="31.0" prefWidth="677.0" promptText="ID card Title" />
+                              <ImageView fx:id="logo" fitHeight="70.0" fitWidth="79.0" layoutX="747.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@../img/sangola.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton layoutX="360.0" layoutY="207.0" onAction="#loadLogo" prefHeight="31.0" prefWidth="149.0" text="Upload Logo" />
+                              <Label layoutX="70.0" layoutY="307.0" prefHeight="25.0" prefWidth="55.0" text="Rules">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextArea fx:id="rules" layoutX="190.0" layoutY="307.0" prefHeight="133.0" prefWidth="702.0" />
+                              <ImageView fitHeight="67.0" fitWidth="76.0" layoutX="870.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                 <image>
+                                    <Image url="@../img/idcard.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="400.0" prefWidth="960.0" style="-fx-background-color: white;">
+                           <effect>
+                              <DropShadow height="52.87" radius="25.1575" width="49.76" />
+                           </effect>
+                           <children>
+                              <Label layoutX="32.0" layoutY="30.0" prefHeight="42.0" prefWidth="259.0" text="General">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton layoutX="745.0" layoutY="456.0" onAction="#general_update" prefHeight="46.0" prefWidth="173.0" text="Update" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </JFXButton>
+                              <Separator layoutX="87.0" layoutY="161.0" prefHeight="24.0" prefWidth="800.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+                              <Separator layoutX="50.0" layoutY="265.0" prefHeight="24.0" prefWidth="800.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+                              <Label layoutX="47.0" layoutY="99.0" prefHeight="51.0" prefWidth="156.0" text="School / College name" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="college_name" layoutX="282.0" layoutY="109.0" prefHeight="31.0" prefWidth="599.0" promptText="Name" />
+                              <ImageView fitHeight="67.0" fitWidth="76.0" layoutX="881.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                 <image>
+                                    <Image url="@../img/general.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="470.0" prefWidth="960.0" style="-fx-background-color: white;">
+                           <effect>
+                              <DropShadow height="52.87" radius="25.1575" width="49.76" />
+                           </effect>
+                           <children>
+                              <Label layoutX="32.0" layoutY="30.0" prefHeight="42.0" prefWidth="259.0" text="Theme Color">
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton layoutX="745.0" layoutY="456.0" onAction="#themeColorUpdate" prefHeight="46.0" prefWidth="173.0" text="Update" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </JFXButton>
+                              <Separator layoutX="87.0" layoutY="161.0" prefHeight="24.0" prefWidth="800.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+                              <Separator layoutX="50.0" layoutY="265.0" prefHeight="24.0" prefWidth="800.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+                              <Label layoutX="103.0" layoutY="100.0" prefHeight="39.0" prefWidth="159.0" text="Main Color" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <JFXColorPicker layoutX="316.0" layoutY="99.0" prefHeight="40.0" prefWidth="148.0" />
+                              <Separator layoutX="491.0" layoutY="83.0" orientation="VERTICAL" prefHeight="72.0" prefWidth="0.0" />
+                              <ImageView fitHeight="67.0" fitWidth="76.0" layoutX="898.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                 <image>
+                                    <Image url="@../img/theme.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</StackPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stack" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.controller.UserLoginController">
+   <children>
+      <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100% , #6c2a99, #ffffff);" styleClass="button" stylesheets="@../css/mouseover_1.css">
+         <children>
+            <Label layoutX="399.0" layoutY="35.0" prefHeight="38.0" prefWidth="156.0" text="User Login" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="pass" focusColor="#f24141" labelFloat="true" layoutX="339.0" layoutY="362.0" prefHeight="25.0" prefWidth="280.0" promptText="Password" styleClass="textfield" stylesheets="@../css/textfield_white.css" unFocusColor="WHITE" />
+            <JFXButton fx:id="btn" layoutX="496.0" layoutY="491.0" onAction="#login" prefHeight="47.0" prefWidth="126.0" style="-fx-background-color: #dadada55;" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="status" layoutX="341.0" layoutY="394.0" prefHeight="17.0" prefWidth="294.0" textFill="RED" />
+            <JFXButton fx:id="back" layoutX="339.0" layoutY="491.0" onAction="#backEvent" prefHeight="47.0" prefWidth="126.0" style="-fx-background-color: #dadada55;" text="back" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <Hyperlink layoutX="512.0" layoutY="410.0" onAction="#forgetPassword" prefHeight="27.0" prefWidth="105.0" text="forget password ?" textFill="WHITE" />
+            <Circle fx:id="img" fill="#f8f8f8" layoutX="470.0" layoutY="183.0" radius="63.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#2197ff00" layoutX="470.0" layoutY="183.0" onMouseClicked="#openimg" radius="71.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="2.0">
+               <effect>
+                  <DropShadow color="#0d8a22" height="68.04" radius="33.4225" spread="0.71" width="67.65" />
+               </effect>
+            </Circle>
+            <Label fx:id="name" alignment="CENTER" layoutX="365.0" layoutY="279.0" prefHeight="27.0" prefWidth="211.0" text="Vivek Ingole" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

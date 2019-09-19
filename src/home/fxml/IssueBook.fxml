@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.controller.IssueBookController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" stylesheets="@../css/mouseover_1.css">
+         <children>
+            <JFXTextField fx:id="hidden1" layoutX="14.0" layoutY="14.0" opacity="0.0" prefHeight="25.0" prefWidth="49.0" />
+            <JFXTextField fx:id="hidden2" layoutX="84.0" layoutY="14.0" opacity="0.0" prefHeight="25.0" prefWidth="49.0" />
+            <Pane layoutX="41.0" layoutY="507.0" prefHeight="60.0" prefWidth="920.0" style="-fx-background-color: #dadada77;">
+               <children>
+                  <JFXDatePicker fx:id="date" layoutX="140.0" layoutY="15.0" overLay="true" prefHeight="31.0" prefWidth="174.0" promptText="Select Date" />
+                  <JFXTimePicker fx:id="time" editable="true" layoutX="604.0" layoutY="15.0" overLay="true" prefHeight="31.0" prefWidth="183.0" promptText="Select Time" />
+               </children>
+            </Pane>
+            <JFXButton layoutX="329.0" layoutY="590.0" onAction="#reset_event" prefHeight="42.0" prefWidth="147.0" text="Reset" />
+            <JFXButton layoutX="523.0" layoutY="590.0" onAction="#issue_event" prefHeight="42.0" prefWidth="147.0" text="Issue" />
+            <Pane layoutX="39.0" layoutY="30.0" prefHeight="449.0" prefWidth="439.0" style="-fx-background-color: #dadada77;">
+               <children>
+                  <JFXTextField fx:id="mid" labelFloat="true" layoutX="200.0" layoutY="35.0" prefHeight="31.0" prefWidth="183.0" promptText="Member ID" />
+                  <JFXTextField fx:id="mname" labelFloat="true" layoutX="188.0" layoutY="156.0" prefHeight="31.0" prefWidth="195.0" promptText="Member Name" />
+                  <JFXTextArea fx:id="addr" labelFloat="true" layoutX="82.0" layoutY="212.0" prefHeight="39.0" prefWidth="299.0" promptText="Address" />
+                  <JFXTextField fx:id="phone" labelFloat="true" layoutX="83.0" layoutY="361.0" prefHeight="31.0" prefWidth="299.0" promptText="Phone no." />
+                  <JFXTextField fx:id="email" labelFloat="true" layoutX="82.0" layoutY="291.0" prefHeight="31.0" prefWidth="299.0" promptText="Email id" />
+                  <JFXRadioButton fx:id="student" layoutX="204.0" layoutY="105.0" text="Student">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="member" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="teacher" layoutX="302.0" layoutY="105.0" text="Teacher">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="member" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <Circle fx:id="mimg" fill="#f8f8f8" layoutX="111.0" layoutY="98.0" radius="63.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle fill="#1f93ff00" layoutX="111.0" layoutY="98.0" onMouseClicked="#openimg" radius="71.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="2.0">
+                     <effect>
+                        <DropShadow color="#0d8a22" height="112.92" radius="50.769999999999996" spread="0.62" width="92.16" />
+                     </effect>
+                  </Circle>
+               </children>
+            </Pane>
+            <Pane layoutX="522.0" layoutY="30.0" prefHeight="449.0" prefWidth="439.0" style="-fx-background-color: #dadada77;">
+               <children>
+                  <JFXTextField fx:id="bid" labelFloat="true" layoutX="204.0" layoutY="44.0" prefHeight="31.0" prefWidth="142.0" promptText="Book ID" />
+                  <JFXTextField fx:id="bname" labelFloat="true" layoutX="199.0" layoutY="106.0" prefHeight="31.0" prefWidth="195.0" promptText="Book Name" />
+                  <JFXTextField fx:id="author" labelFloat="true" layoutX="178.0" layoutY="169.0" prefHeight="31.0" prefWidth="217.0" promptText="Author" />
+                  <JFXTextField fx:id="price" labelFloat="true" layoutX="67.0" layoutY="222.0" prefHeight="39.0" prefWidth="323.0" promptText="Price" />
+                  <JFXTextField fx:id="copies" labelFloat="true" layoutX="67.0" layoutY="287.0" prefHeight="39.0" prefWidth="323.0" promptText="Copies" />
+                  <JFXTextField fx:id="column" labelFloat="true" layoutX="67.0" layoutY="365.0" prefHeight="39.0" prefWidth="323.0" promptText="Column" />
+                  <Circle fx:id="bimg" fill="#f8f8f8" layoutX="104.0" layoutY="94.0" radius="63.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle fill="#1f93ff00" layoutX="104.0" layoutY="94.0" onMouseClicked="#openimg" radius="71.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="2.0">
+                     <effect>
+                        <DropShadow color="#0d8a22" height="95.13" radius="43.36" spread="0.65" width="80.31" />
+                     </effect>
+                  </Circle>
+                  <JFXToggleButton fx:id="checkScanner" layoutX="297.0" layoutY="-7.0" onAction="#checkToScan" prefHeight="39.0" prefWidth="127.0" text="Scanner" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

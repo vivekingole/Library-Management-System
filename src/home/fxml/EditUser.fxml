@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.controller.EditUserController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" styleClass="tree-table-cell" stylesheets="@../css/centertabledata.css">
+         <children>
+            <AnchorPane fx:id="anchor1" layoutX="20.0" layoutY="89.0" prefHeight="605.0" prefWidth="980.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="85.0">
+               <children>
+                  <JFXTreeTableView fx:id="table" layoutX="71.0" layoutY="27.0" prefHeight="490.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <Label fx:id="size" layoutX="14.0" layoutY="44.0" prefHeight="32.0" prefWidth="234.0" text="Total Records" textFill="WHITE" />
+            <JFXTextField fx:id="searchtf" layoutX="716.0" layoutY="37.0" prefHeight="32.0" prefWidth="211.0" promptText="Search" />
+            <Label fx:id="searchlbl" alignment="CENTER_RIGHT" layoutX="716.0" layoutY="37.0" onMouseClicked="#searchExit" onMouseEntered="#searchEnter" prefHeight="32.0" prefWidth="222.0" textAlignment="RIGHT">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" rotate="12.5">
+                     <image>
+                        <Image url="@../img/magnifier.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="389.0" layoutY="39.0" onAction="#permission_edit" prefHeight="21.0" prefWidth="21.0">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../img/course.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="283.0" layoutY="38.0" onAction="#refresh" prefHeight="12.0" prefWidth="27.0">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../img/refresh.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="488.0" layoutY="38.0" onAction="#photoEdit" prefHeight="21.0" prefWidth="21.0">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../img/edit_photo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="588.0" layoutY="43.0" onAction="#delete" prefHeight="21.0" prefWidth="21.0">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../img/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

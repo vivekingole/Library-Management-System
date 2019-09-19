@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.controller.AddUserController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" stylesheets="@../css/mouseover_1.css">
+         <children>
+            <Pane layoutX="76.0" layoutY="36.0" prefHeight="324.0" prefWidth="460.0" style="-fx-background-color: #dadada77;">
+               <children>
+                  <JFXTextField fx:id="username" labelFloat="true" layoutX="232.0" layoutY="28.0" prefHeight="31.0" prefWidth="167.0" promptText="Username" />
+                  <JFXDatePicker fx:id="date" layoutX="54.0" layoutY="266.0" overLay="true" prefHeight="25.0" prefWidth="155.0" promptText="Select Date" />
+                  <JFXTextArea fx:id="addr" labelFloat="true" layoutX="57.0" layoutY="152.0" prefHeight="31.0" prefWidth="341.0" promptText="Address" />
+                  <JFXTextField fx:id="phone" labelFloat="true" layoutX="57.0" layoutY="210.0" prefHeight="25.0" prefWidth="127.0" promptText="Phone no." />
+                  <JFXTextField fx:id="email" labelFloat="true" layoutX="209.0" layoutY="210.0" prefHeight="31.0" prefWidth="190.0" promptText="Email id" />
+                  <JFXPasswordField fx:id="pass1" labelFloat="true" layoutX="57.0" layoutY="91.0" prefHeight="31.0" prefWidth="142.0" promptText="Password" />
+                  <JFXPasswordField fx:id="pass2" labelFloat="true" layoutX="232.0" layoutY="91.0" prefHeight="31.0" prefWidth="167.0" promptText="Confirm Password" />
+                  <JFXTextField fx:id="id" labelFloat="true" layoutX="57.0" layoutY="28.0" prefHeight="31.0" prefWidth="142.0" promptText="User Id" />
+                  <JFXTimePicker fx:id="time" editable="true" layoutX="250.0" layoutY="266.0" overLay="true" prefHeight="31.0" prefWidth="155.0" promptText="Select Time" />
+               </children>
+            </Pane>
+            <JFXButton layoutX="548.0" layoutY="548.0" onAction="#reset_event" prefHeight="42.0" prefWidth="147.0" text="Reset" />
+            <JFXButton layoutX="780.0" layoutY="548.0" onAction="#add_event" prefHeight="42.0" prefWidth="147.0" text="Add" />
+            <Pane layoutX="76.0" layoutY="371.0" style="-fx-background-color: #dadada77;">
+               <children>
+                  <JFXCheckBox fx:id="book" alignment="CENTER" layoutY="40.0" onAction="#permission" prefHeight="35.0" prefWidth="118.0" text="Book">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="badd" layoutX="28.0" layoutY="75.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="Add" />
+                  <Label layoutX="26.0" layoutY="11.0" text="Set Permissions :-">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXCheckBox fx:id="bedit" layoutX="28.0" layoutY="110.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="Edit" />
+                  <JFXCheckBox fx:id="bissue" layoutX="28.0" layoutY="140.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="issue" />
+                  <JFXCheckBox fx:id="bsubmit" layoutX="28.0" layoutY="174.0" onAction="#permission" prefHeight="35.0" prefWidth="90.0" text="Submit" />
+                  <JFXCheckBox fx:id="bview" layoutX="28.0" layoutY="209.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="View" />
+                  <JFXCheckBox fx:id="member" alignment="CENTER" layoutX="139.0" layoutY="40.0" onAction="#permission" prefHeight="35.0" prefWidth="118.0" text="Member">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="madd" layoutX="156.0" layoutY="75.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="Add" />
+                  <JFXCheckBox fx:id="medit" layoutX="156.0" layoutY="110.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="Edit" />
+                  <JFXCheckBox fx:id="mview" layoutX="156.0" layoutY="145.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="View" />
+                  <JFXCheckBox fx:id="user" alignment="CENTER" layoutX="241.0" layoutY="40.0" onAction="#permission" prefHeight="35.0" prefWidth="118.0" text="User">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="uadd" layoutX="274.0" layoutY="75.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="Add" />
+                  <JFXCheckBox fx:id="uedit" layoutX="274.0" layoutY="110.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="Edit" />
+                  <JFXCheckBox fx:id="uview" layoutX="274.0" layoutY="145.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="View" />
+                  <JFXCheckBox fx:id="setting" layoutX="377.0" layoutY="40.0" onAction="#permission" prefHeight="35.0" prefWidth="83.0" text="Settings" />
+                  <JFXCheckBox fx:id="view" layoutX="377.0" layoutY="75.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="View" />
+                  <JFXCheckBox fx:id="all" layoutX="377.0" layoutY="110.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="All" />
+               </children>
+            </Pane>
+            <Pane layoutX="548.0" layoutY="276.0" prefHeight="208.0" prefWidth="379.0" style="-fx-background-color: #dadada77;">
+               <children>
+                  <JFXComboBox fx:id="question" labelFloat="true" layoutX="75.0" layoutY="32.0" prefHeight="25.0" prefWidth="225.0" promptText="Select Security question" />
+                  <JFXTextField fx:id="answer" labelFloat="true" layoutX="75.0" layoutY="86.0" prefHeight="25.0" prefWidth="218.0" promptText="security answer" />
+                  <JFXButton layoutX="214.0" layoutY="134.0" onAction="#addQuestion" prefHeight="35.0" prefWidth="83.0" text="add Que." />
+                  <JFXButton layoutX="75.0" layoutY="134.0" onAction="#clear_question" prefHeight="35.0" prefWidth="83.0" text="clear" />
+               </children>
+            </Pane>
+            <Circle fx:id="img" fill="#f8f8f8" layoutX="730.0" layoutY="138.0" radius="63.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#2197ff00" layoutX="730.0" layoutY="138.0" onMouseClicked="#load_img" radius="71.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="2.0">
+               <effect>
+                  <DropShadow color="#0d8a22" height="68.04" radius="33.4225" spread="0.71" width="67.65" />
+               </effect>
+            </Circle>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

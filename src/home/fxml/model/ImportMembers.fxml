@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stack" prefHeight="621.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.fxml.model.ImportMembersController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="anchor" minWidth="-Infinity" prefHeight="621.0" prefWidth="900.0">
+         <children>
+            <JFXButton graphicTextGap="0.0" layoutX="617.0" layoutY="31.0" onAction="#loadSheet" prefHeight="0.0" prefWidth="57.0" text=" " AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="31.0">
+               <graphic>
+                  <ImageView fitHeight="61.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/excel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label layoutX="47.0" layoutY="44.0" prefHeight="34.0" prefWidth="229.0" text="Import Sheet">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <JFXListView fx:id="list" layoutX="14.0" layoutY="126.0" prefHeight="398.0" prefWidth="916.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="126.0" />
+            <JFXButton layoutX="496.0" layoutY="513.0" onAction="#insertRecords" prefHeight="43.0" prefWidth="200.0" text="Insert Records" AnchorPane.bottomAnchor="33.0" AnchorPane.rightAnchor="14.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="status" layoutX="15.0" layoutY="613.0" prefHeight="31.0" prefWidth="348.0" textFill="RED" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="15.0" />
+            <JFXButton layoutX="649.0" layoutY="624.0" onAction="#clear" prefHeight="43.0" prefWidth="126.0" text="Clear" AnchorPane.bottomAnchor="33.0" AnchorPane.rightAnchor="225.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXSpinner fx:id="spinner" layoutX="447.0" layoutY="297.0" prefHeight="78.0" prefWidth="86.0" visible="false" />
+            <JFXButton fx:id="closebtn" graphicTextGap="0.0" layoutX="837.0" prefHeight="31.0" prefWidth="36.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

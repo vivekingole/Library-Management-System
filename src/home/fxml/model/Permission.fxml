@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<StackPane fx:id="stack" prefHeight="431.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.fxml.model.PermissionController">
+   <children>
+      <AnchorPane fx:id="anchor" prefHeight="305.0" prefWidth="434.0">
+         <children>
+            <JFXCheckBox fx:id="book" alignment="CENTER" layoutX="27.0" layoutY="112.0" onAction="#permission" prefHeight="35.0" prefWidth="118.0" text="Book" />
+            <JFXCheckBox fx:id="badd" layoutX="78.0" layoutY="147.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="Add" />
+            <JFXCheckBox fx:id="bedit" layoutX="78.0" layoutY="182.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="Edit" />
+            <JFXCheckBox fx:id="bissue" layoutX="78.0" layoutY="217.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="issue" />
+            <JFXCheckBox fx:id="bsubmit" layoutX="78.0" layoutY="250.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="Submit" />
+            <JFXCheckBox fx:id="bview" layoutX="78.0" layoutY="285.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="View" />
+            <JFXCheckBox fx:id="member" alignment="CENTER" layoutX="126.0" layoutY="112.0" onAction="#permission" prefHeight="35.0" prefWidth="118.0" text="Member" />
+            <JFXCheckBox fx:id="madd" layoutX="166.0" layoutY="147.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="Add" />
+            <JFXCheckBox fx:id="medit" layoutX="166.0" layoutY="182.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="Edit" />
+            <JFXCheckBox fx:id="mview" layoutX="166.0" layoutY="217.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="View" />
+            <JFXCheckBox fx:id="user" alignment="CENTER" layoutX="217.0" layoutY="112.0" onAction="#permission" prefHeight="35.0" prefWidth="118.0" text="User" />
+            <JFXCheckBox fx:id="uadd" layoutX="269.0" layoutY="147.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="Add" />
+            <JFXCheckBox fx:id="uedit" layoutX="269.0" layoutY="182.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="Edit" />
+            <JFXCheckBox fx:id="uview" layoutX="269.0" layoutY="217.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="View" />
+            <JFXCheckBox fx:id="setting" layoutX="340.0" layoutY="114.0" onAction="#permission" prefHeight="35.0" prefWidth="83.0" text="Settings" />
+            <JFXCheckBox fx:id="view" layoutX="340.0" layoutY="169.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="View" />
+            <JFXCheckBox fx:id="all" layoutX="340.0" layoutY="223.0" onAction="#permission" prefHeight="35.0" prefWidth="64.0" text="All" />
+            <JFXButton layoutX="443.0" layoutY="23.0" onAction="#close" prefHeight="35.0" prefWidth="43.0" text="close" />
+            <Text layoutX="53.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Permission :" wrappingWidth="145.13671875">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <JFXButton layoutX="328.0" layoutY="356.0" onAction="#update" prefHeight="44.0" prefWidth="145.0" text="Update" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

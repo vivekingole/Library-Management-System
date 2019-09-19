@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #6c2a99, #ffffff);" stylesheets="@../../css/slide-pane-over.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.fxml.model.UserSlidePaneController">
+   <children>
+      <AnchorPane fx:id="sidepane2" prefHeight="211.0" prefWidth="300.0">
+         <children>
+            <Circle fx:id="active_user" fill="#f8f8f8" layoutX="150.0" layoutY="125.0" radius="63.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#2197ff00" layoutX="150.0" layoutY="125.0" radius="71.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="2.0">
+               <effect>
+                  <DropShadow color="#0d8a22" height="67.85" radius="33.375" spread="0.83" width="67.65" />
+               </effect>
+            </Circle>
+         </children>
+      </AnchorPane>
+      <Label fx:id="active_user_name" alignment="CENTER" prefHeight="48.0" prefWidth="293.0" text="Username" textAlignment="CENTER">
+         <font>
+            <Font name="Segoe UI Semibold" size="23.0" />
+         </font>
+      </Label>
+      <JFXToggleButton fx:id="auto_issue_submit" accessibleText="auto" prefHeight="72.0" prefWidth="300.0" size="12.0" text="Auto Issue / submit">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXToggleButton>
+      <JFXButton accessibleText="password" onAction="#changePassword" prefHeight="68.0" prefWidth="300.0" text="Change Password" />
+      <JFXButton accessibleText="photo" onAction="#updatePhoto" prefHeight="63.0" prefWidth="300.0" text="Update Photo" />
+      <JFXButton accessibleText="logout" onAction="#logout" prefHeight="64.0" prefWidth="300.0" text="Logout" />
+   </children>
+</VBox>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.controller.AddBookController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100% , #6c2a99, #ffffff);" stylesheets="@../css/mouseover_1.css">
+         <children>
+            <ImageView fx:id="barcode" fitHeight="59.0" fitWidth="183.0" layoutX="634.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true" />
+            <Pane layoutX="129.0" layoutY="68.0" prefHeight="425.0" prefWidth="430.0" style="-fx-background-color: #dadada77;">
+               <children>
+                  <JFXTextField fx:id="id" labelFloat="true" layoutX="63.0" layoutY="42.0" prefHeight="31.0" prefWidth="167.0" promptText="Book ID" style="fx-prompt-text-fill: white;" stylesheets="@../css/textfield_white.css" />
+                  <JFXTextField fx:id="name" labelFloat="true" layoutX="63.0" layoutY="106.0" prefHeight="31.0" prefWidth="304.0" promptText="Book Title" />
+                  <JFXDatePicker fx:id="date" layoutX="57.0" layoutY="307.0" overLay="true" prefHeight="25.0" prefWidth="194.0" promptText="Select Date" />
+                  <JFXTextField fx:id="author" labelFloat="true" layoutX="64.0" layoutY="174.0" prefHeight="31.0" prefWidth="304.0" promptText="Author" />
+                  <JFXTextField fx:id="price" labelFloat="true" layoutX="57.0" layoutY="242.0" prefHeight="31.0" prefWidth="118.0" promptText="Price" />
+                  <JFXTextField fx:id="copies" labelFloat="true" layoutX="249.0" layoutY="42.0" prefHeight="31.0" prefWidth="118.0" promptText="Copies" />
+                  <JFXTimePicker fx:id="time" editable="true" layoutX="59.0" layoutY="367.0" overLay="true" prefHeight="31.0" prefWidth="194.0" promptText="Select Time" />
+                  <JFXComboBox fx:id="column" labelFloat="true" layoutX="196.0" layoutY="242.0" prefHeight="31.0" prefWidth="174.0" promptText="Column" />
+               </children>
+               <padding>
+                  <Insets right="10.0" top="10.0" />
+               </padding>
+            </Pane>
+            <JFXButton layoutX="150.0" layoutY="520.0" onAction="#reset_event" prefHeight="42.0" prefWidth="147.0" text="Reset" />
+            <JFXButton buttonType="RAISED" layoutX="397.0" layoutY="520.0" onAction="#add_event" prefHeight="42.0" prefWidth="147.0" text="Add" />
+            <JFXButton layoutX="652.0" layoutY="381.0" onAction="#barcode_event" prefHeight="42.0" prefWidth="147.0" text="Generate Barcode" />
+            <JFXSpinner fx:id="spinner" layoutX="691.0" layoutY="245.0" visible="false" />
+            <JFXSpinner fx:id="mainspinner" layoutX="420.0" layoutY="164.0" visible="false" />
+            <JFXButton graphicTextGap="0.0" layoutX="888.0" layoutY="36.0" onAction="#importBook" prefHeight="0.0" prefWidth="57.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="61.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/excel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Circle fx:id="img1" fill="#f8f8f8" layoutX="726.0" layoutY="153.0" radius="63.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fill="#2197ff00" layoutX="726.0" layoutY="153.0" onMouseClicked="#load_img" radius="71.0" stroke="#34b928" strokeType="INSIDE" strokeWidth="2.0">
+               <effect>
+                  <DropShadow color="#0d8a22" height="68.04" radius="33.4225" spread="0.71" width="67.65" />
+               </effect>
+            </Circle>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

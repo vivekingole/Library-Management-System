@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vbox1" alignment="TOP_RIGHT" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #6c2a99, #ffffff);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.fxml.model.SlidePaneController">
+   <children>
+      <Pane prefHeight="1.0" prefWidth="200.0" />
+      <VBox fx:id="vbox2" prefHeight="738.0" prefWidth="300.0" stylesheets="@../../css/slide-pane-over.css">
+         <children>
+            <Pane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="192.0" prefWidth="300.0">
+               <children>
+                  <Label layoutX="24.0" layoutY="77.0" prefHeight="76.0" prefWidth="252.0" text="Library Management System" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <JFXButton fx:id="home1" accessibleText="home" alignment="TOP_LEFT" graphicTextGap="20.0" prefHeight="70.0" prefWidth="300.0" text="Home">
+               <graphic>
+                  <ImageView fitHeight="46.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/home1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="60.0" top="15.0" />
+               </padding>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="book1" accessibleText="book" alignment="TOP_LEFT" graphicTextGap="20.0" prefHeight="70.0" prefWidth="300.0" text="Book">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/books.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="60.0" top="15.0" />
+               </padding>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="issuesubmit1" accessibleText="issuesubmit" alignment="TOP_LEFT" graphicTextGap="20.0" prefHeight="70.0" prefWidth="300.0" text="Issue / Submit">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/add-book.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="60.0" top="15.0" />
+               </padding>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="member1" accessibleText="member" alignment="TOP_LEFT" graphicTextGap="20.0" prefHeight="70.0" prefWidth="300.0" text="Member">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/humm.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="60.0" top="15.0" />
+               </padding>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="user1" accessibleText="user" alignment="TOP_LEFT" graphicTextGap="20.0" prefHeight="70.0" prefWidth="300.0" text="User">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/user2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="60.0" top="15.0" />
+               </padding>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="setting1" accessibleText="setting" alignment="TOP_LEFT" graphicTextGap="20.0" prefHeight="70.0" prefWidth="300.0" text="Setting">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/setting1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="60.0" top="15.0" />
+               </padding>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="logout1" accessibleText="logout" alignment="TOP_LEFT" graphicTextGap="20.0" prefHeight="70.0" prefWidth="300.0" text="Logout">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/logoff.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="60.0" top="15.0" />
+               </padding>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</VBox>
