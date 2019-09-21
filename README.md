@@ -1,5 +1,7 @@
 # Library-Management-System
 
+## Screenshots of the System
+
 <img src="screenshot/1.png" height=400 width=600/><br>
 ## Welcome Screen <br>
 
